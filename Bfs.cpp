@@ -39,13 +39,13 @@ void bfs(int start,int adj[][5],int num){
 
 int main(){
     int num = 5;
-     int graph[][5] = {
-        {0, 1, 1, 0, 0}, 
-        {1, 0, 0, 1, 1}, 
-        {1, 0, 0, 0, 1},
-        {0, 1, 0, 0, 0}, 
-        {0, 1, 1, 0, 0} 
-    };
+    int graph[5][5];
+    cout<<"Enter the adj matrix";
+    for(int i = 0;i<5;i++){
+        for(int j = 0;j<5;j++){
+            cin>>graph[i][j];
+        }
+    }
     int start = 0;
     cout<<"The Bfs starting from the node "<<start<<endl;
     bfs(start,graph,num);
